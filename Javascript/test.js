@@ -1,0 +1,12 @@
+function sum_char_codes(n) {
+  let sum = 0;
+
+  for (let i = 0; i < n.length; i++) {
+    sum += n.charCodeAt(i);
+  }
+  console.log(sum);
+
+  return sum;
+}
+
+sum_char_codes("hello");
