@@ -11,4 +11,6 @@ It contains two tracks:
 
 Start with [the DSA roadmap](dsa/00-start-here/roadmap.md) or [the system-design roadmap](system-design/00-start-here/roadmap.md). Every DSA problem deliberately puts `01-try-it-yourself.md` before hints and solutions. Do the attempt before opening the answer material.
 
+For a day-by-day schedule covering both tracks, use the [weekly study plan](weekly-study-plan.md).
+
 The goal is to be able to explain *why* a solution works, implement it cleanly, test its edge cases, and recognise the same idea in an unfamiliar question.
