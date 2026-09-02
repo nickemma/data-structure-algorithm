@@ -1,45 +1,59 @@
 # Weekly study plan
 
-This plan turns the DSA and system-design tracks into a repeatable Monday–Sunday schedule.
-Plan for about 90–120 minutes per day: one focused DSA block and one shorter system-design or review block.
-If you have less time, complete the DSA assignment first and carry the second block forward.
+A rhythm, not a syllabus. Patterns unlock as you finish them, so the calendar bends to your pace rather than the other way round.
 
-## The daily lesson format
+Budget **~90 minutes a day**. If you only have 45, do the DSA block and drop the rest.
 
-| Day | Lesson | What to do |
+## The weekly rhythm
+
+One pattern per week is a comfortable pace. Two per week is aggressive but doable if you're interviewing soon.
+
+| Day | Block | What |
 | --- | --- | --- |
-| Monday | Pattern lesson | Read the DSA pattern primer, answer its MCQs, and complete the first **Learn** problem. Read the week's system-design module overview. |
-| Tuesday | Guided practice | Complete the next two DSA problems. Attempt each one before opening hints or explanations. |
-| Wednesday | Design lesson | Study the week's system-design concept. Write the problem, trade-offs, a small data model, and one diagram or request flow. |
-| Thursday | Application lesson | Complete the final two DSA problems. Finish the system-design exercise and practise explaining the design aloud for five minutes. |
-| Friday | Retrieval review | Re-solve two DSA problems from this week without notes. Review the system-design trade-off card and answer its MCQs. |
-| Saturday | Timed interview | Do the listed DSA mock in 45 minutes, or a system-design mock when marked **SD**. Record gaps and unclear explanations. |
-| Sunday | Consolidation | Review the summary sheet, update the progress tracker and weak-pattern notes, and schedule 1-day, 1-week, and 1-month revisits. |
+| **Mon** | DSA · 60 min | Read the pattern lesson + do the walkthrough with me. |
+| **Tue** | DSA · 60 min | Practice problem 1, timed. Paste the passing code into `my-code/`. |
+| **Wed** | SD · 60 min | One system design module: script, worked example, or a mock. |
+| **Thu** | DSA · 60 min | Practice problem 2 + the recognition check. Bring both to me. |
+| **Fri** | Review · 45 min | Re-solve one problem from an earlier week, cold. Update `dsa/progress.md`. |
+| **Sat** | Mock · 60 min | Every 2–3 weeks: one timed DSA or system design mock. Otherwise rest. |
+| **Sun** | — | Off. Genuinely off. Retention needs it. |
 
-## The 15-week sequence
+Friday is the day people skip, and it's the day that actually builds retention. Protect it.
 
-The five DSA problems listed in each row are the week's new lessons. Use the links in the [Blind 75 catalogue](dsa/02-blind-75/README.md). For every problem, follow the repository's order: try it yourself, use hints if needed, then read the explanation and implement the solution.
+## Suggested sequence
 
-| Week | Monday–Tuesday DSA lessons | Thursday DSA lessons | Wednesday system-design lesson | Saturday |
-| --- | --- | --- | --- | --- |
-| 1 | 1 Two Sum; 2 Best Time to Buy and Sell Stock; 3 Contains Duplicate | 4 Product of Array Except Self; 5 Maximum Subarray | 01 Scoping: requirements and data model | DSA Mock 01 — arrays and hashing |
-| 2 | 6 Maximum Product Subarray; 7 Find Minimum in Rotated Sorted Array; 8 Search in Rotated Sorted Array | 9 Three Sum; 10 Container With Most Water | 02 System quality: reliability, performance, observability | DSA Mock 02 — two pointers |
-| 3 | 11 Sum of Two Integers; 12 Number of 1 Bits; 13 Counting Bits | 14 Missing Number; 15 Reverse Bits | 03 Scaling: vertical/horizontal scaling and load balancers | DSA Mock 04 — binary search and intervals |
-| 4 | 16 Climbing Stairs; 17 Coin Change; 18 Longest Increasing Subsequence | 19 Longest Common Subsequence; 20 Word Break | 04 CAP theorem: consistency, availability, partitions | SD Mock — design a URL shortener |
-| 5 | 21 Combination Sum; 22 House Robber; 23 House Robber II | 24 Decode Ways; 25 Unique Paths | 05 Relational data: modelling, ACID and sharding | DSA Mock 08 — dynamic programming |
-| 6 | 26 Jump Game; 27 Clone Graph; 28 Course Schedule | 29 Pacific Atlantic Water Flow; 30 Number of Islands | 06 Caching: client/server caches, CDNs and invalidation | SD Mock — design a news feed |
-| 7 | 31 Longest Consecutive Sequence; 32 Alien Dictionary; 33 Graph Valid Tree | 34 Number of Connected Components; 35 Word Ladder | 07 Security: authentication, authorisation and TLS | DSA Mock 07 — graphs |
-| 8 | 36 Insert Interval; 37 Merge Intervals; 38 Non-overlapping Intervals | 39 Meeting Rooms; 40 Meeting Rooms II | 08 Protocols: HTTP, REST and GraphQL | DSA Mock 04 — binary search and intervals |
-| 9 | 41 Reverse Linked List; 42 Linked List Cycle; 43 Merge Two Sorted Lists | 44 Merge K Sorted Lists; 45 Remove Nth Node From End | 09 Resilience: failure modes, fallbacks and edge cases | DSA Mock 05 — linked lists |
-| 10 | 46 Reorder List; 47 Set Matrix Zeroes; 48 Spiral Matrix | 49 Rotate Image; 50 Word Search | 10 Async workflows: queues, brokers and processors | SD Mock — design a job scheduler |
-| 11 | 51 Longest Substring Without Repeating Characters; 52 Longest Repeating Character Replacement; 53 Minimum Window Substring | 54 Valid Anagram; 55 Group Anagrams | 11 Distributed data: non-relational models and replication | DSA Mock 03 — windows and stacks |
-| 12 | 56 Valid Parentheses; 57 Valid Palindrome; 58 Longest Palindromic Substring | 59 Palindromic Substrings; 60 Maximum Depth of Binary Tree | 12 Case studies: apply the complete interview sequence | SD Mock — design an e-commerce checkout |
-| 13 | 61 Same Tree; 62 Invert Binary Tree; 63 Binary Tree Maximum Path Sum | 64 Binary Tree Level Order Traversal; 65 Serialize and Deserialize Binary Tree | Review scoping, quality and scaling; compare two alternative architectures | DSA Mock 06 — trees |
-| 14 | 66 Subtree of Another Tree; 67 Construct Tree from Preorder and Inorder; 68 Validate Binary Search Tree | 69 Kth Smallest Element in a BST; 70 Lowest Common Ancestor of a BST | Review data, caching, security and protocols; practise trade-off answers | SD Mock — design a video-streaming service |
-| 15 | 71 Implement Trie; 72 Add and Search Word; 73 Word Search II | 74 Top K Frequent Elements; 75 Find Median from Data Stream | Review resilience, async workflows, distributed data and case studies | DSA Mock 09, then Mock 10 — mixed final |
+Week 1 is fixed. After that, the DSA order is the pattern order in [dsa/README.md](dsa/README.md), and system design runs alongside it independently.
 
-## How to use each lesson
+| Week | DSA | System design |
+| --- | --- | --- |
+| 1 | [35-min script](dsa/how-to-solve.md) + [Big-O](dsa/big-o-basics.md) + Pattern 01 Two Pointers | [45-min script](system-design/how-to-approach.md) + [worked example](system-design/01-worked-example/) |
+| 2 | Pattern 02 Hash Map & Set | [Practice: rate limiter](system-design/practice.md) → review with me |
+| 3 | Pattern 03 Sliding Window | Reference: [scoping](system-design/reference/foundations/01-scoping/) + [scaling](system-design/reference/foundations/03-scaling/) |
+| 4 | Patterns 04–05 Linked lists | Mock: notification service |
+| 5 | Pattern 06 Binary Search | Reference: [caching](system-design/reference/foundations/06-caching/) + [CAP](system-design/reference/foundations/04-cap-theorem/) |
+| 6 | Patterns 07–08 Prefix Sum, Monotonic Stack | Mock: news feed |
+| 7 | Patterns 09–10 Intervals, Top K | Reference: [distributed data](system-design/reference/working-at-scale/11-distributed-data/) + [async workflows](system-design/reference/working-at-scale/10-async-workflows/) |
+| 8 | Pattern 11 Tree Traversal | Mock: job scheduler |
+| 9 | Pattern 12 Graphs & Matrices | Reference: [resilience](system-design/reference/working-at-scale/09-resilience/) + [protocols](system-design/reference/working-at-scale/08-protocols/) |
+| 10 | Pattern 13 Backtracking | Mock: chat service |
+| 11 | Pattern 14 Dynamic Programming (give this two weeks) | Reference: [case studies](system-design/reference/working-at-scale/12-case-studies/) |
+| 12 | Pattern 14 continued + Pattern 15 Bit Manipulation | Mock: pick your weakest |
+| 13+ | Re-solve everything cold, in random order | Re-run your two weakest designs from scratch |
 
-For DSA, finish every session by stating the invariant, time and space complexity, and one tricky test case. For system design, finish by stating the main bottleneck, the failure mode you would handle first, and the trade-off behind your most important choice.
+## If you have an interview next week
 
-Do not open `03-explanation.md` or a `solutions/` directory until you have made an honest attempt. On Sunday, mark a problem as complete only when you can solve it and explain it without copying the answer.
+Drop the schedule. Do this instead:
+
+1. [The 35-minute script](dsa/how-to-solve.md) and [the 45-minute script](system-design/how-to-approach.md). These are pure technique and pay off immediately.
+2. Patterns **01 Two Pointers**, **02 Hash Map & Set**, **03 Sliding Window** — between them they cover a large share of what gets asked at screen stage.
+3. One full timed mock of each type. Out loud. Recorded.
+
+Technique before coverage. A candidate who structures the problem well and solves it with a hint beats one who knows more patterns and communicates none of it.
+
+## Rules that make this work
+
+- **Out loud, alone, in a real voice.** Every problem, every design.
+- **Time-box and stop.** 25 min easy · 35 min medium · 45 min design.
+- **Log everything** in [dsa/progress.md](dsa/progress.md), including failures. The weak-spots table is the most valuable page in the repo after a month.
+- **Re-solve, don't re-read.** 1 day, 1 week, 1 month, from a blank editor.
+- **Don't open `verdict.md` before writing your own answer.** One first attempt per problem — don't spend it reading.
