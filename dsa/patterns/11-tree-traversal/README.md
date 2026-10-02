@@ -1,6 +1,6 @@
 # Pattern 11 — Binary Tree Traversal
 
-**Status:** 🔒 locked — unlocks when you finish [Pattern 10](../10-top-k-elements/)
+**Status:** outline only. Follow [the curriculum](../../../CURRICULUM.md) for prerequisites and learning order.
 
 ## What it is (one line)
 
@@ -18,10 +18,10 @@ Same shape as every other pattern in this repo:
 | --- | --- |
 | `README.md` | The lesson — the idea, the precondition, the code template, when it fails |
 | `walkthrough.md` | **Maximum Depth of Binary Tree (LC 104)**, solved with you minute by minute on a 35-minute interview clock |
-| `solution/` | My reference implementation, Python + TypeScript, with tests you can run |
+| `solution/` | Planned Python reference implementation, revealed after your attempt |
 | `practice.md` | Two problems you solve alone on LeetCode, plus a recognition check |
 | `verdict.md` | Honest answers to the recognition check — whether the pattern really fits |
-| `my-code/` | Where your passing submissions live |
+| `my-code/` | Where your attempts, reasoning, and reviewed code live |
 
 **Anchor problem:** Maximum Depth of Binary Tree (LC 104)
 
@@ -31,4 +31,4 @@ Same shape as every other pattern in this repo:
 
 ---
 
-Nothing here yet on purpose. Finish the previous pattern, bring me your code, and I'll write this one — tuned to what you actually got wrong last time.
+This page is a topic outline. The full lesson and supporting files will be developed when we reach its curriculum module, using your attempts to choose the examples and practice.

@@ -1,6 +1,6 @@
 # Pattern 01 — Two Pointers
 
-**Status:** unlocked · **Time:** ~90 min lesson, then 2 LeetCode problems on your own
+**Status:** developed lesson for D04. Complete D01–D03 in [the curriculum](../../../CURRICULUM.md) first. Use the Python examples; timing is optional during initial learning.
 
 Read this file top to bottom. Then do [walkthrough.md](walkthrough.md) with me. Then go do [practice.md](practice.md) alone.
 

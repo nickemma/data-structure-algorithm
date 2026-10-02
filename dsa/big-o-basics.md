@@ -1,79 +1,29 @@
-# Big-O in 10 minutes
+# Complexity refresher
 
-You need exactly this much to pass interviews. Not more.
+Start with [Lesson 01](lessons/01-complexity/README.md) first. This is a reference for later practice.
 
-## What it measures
+Define the input size and count work as it grows. Big-O is an asymptotic upper bound; in interviews we usually aim to give a tight bound for the stated case. It does not measure seconds. State worst-case time by default, and label expected or amortized claims explicitly.
 
-Big-O answers one question: **as the input gets bigger, how much slower does this get?**
-
-It is not seconds. It is shape. Constants are dropped: 3n and n/2 and n+100 are all "O(n)", because for large n the shape is a straight line.
-
-## Counting it
-
-Count how many times the innermost operation runs, in terms of `n` (the input size).
-
-```python
-for x in items:          # runs n times      -> O(n)
-    print(x)
-
-for a in items:          # n times
-    for b in items:      #   x n times
-        print(a, b)      # = n*n             -> O(n^2)
-
-left, right = 0, len(items) - 1
-while left < right:      # each step moves a pointer inward
-    left += 1            # total moves across both pointers = n
-                         #                    -> O(n)
-```
-
-Two sequential loops are `O(n) + O(n) = O(2n) = O(n)`. Only **nesting** multiplies.
-
-## The ladder, fastest to slowest
-
-| Notation | Name | n = 1,000,000 feels like | Typical cause |
-| --- | --- | --- | --- |
-| O(1) | constant | instant | hash map lookup, arithmetic |
-| O(log n) | logarithmic | instant (~20 steps) | binary search, balanced tree |
-| O(n) | linear | fast | one pass over the input |
-| O(n log n) | linearithmic | fine | **sorting**, heap of n items |
-| O(n²) | quadratic | too slow | nested loops over the input |
-| O(2ⁿ) | exponential | hopeless past n≈25 | naive recursion, all subsets |
-
-## The interview shortcut
-
-Interviewers pick constraints that tell you the answer. Read them:
-
-| If the constraint says | The intended solution is about |
+| Growth | Example under the usual interview cost model |
 | --- | --- |
-| n ≤ 20 | O(2ⁿ) — backtracking / try everything |
-| n ≤ 1,000 | O(n²) is fine — don't over-engineer |
-| n ≤ 100,000 | O(n log n) — sort, or a heap |
-| n ≤ 1,000,000 | O(n) or O(log n) — one pass, or binary search |
+| O(1) | List indexing |
+| O(log n) | Halving a search interval |
+| O(n) | Scanning n items once |
+| O(n log n) | Merge sort |
+| O(n²) | Comparing every ordered pair of n items |
+| O(2ⁿ) | Number of subsets; materializing every subset costs O(n · 2ⁿ) overall |
 
-Rough rule: a judge like LeetCode does ~10⁸ simple operations per second. If your op count blows past that, you'll time out.
+Two sequential scans of sizes n and m cost O(n + m). Nested full scans cost O(nm). For nested loops with changing bounds, count total iterations rather than multiplying mechanically. Pointer movements can total O(n) even when the code has a nested loop.
 
-## Space complexity
+Auxiliary space counts additional working memory, including recursion frames, temporary copies, and library allocations. State output space separately when helpful; total space also includes the input. A list slice of k elements takes O(k) time and extra space.
 
-Same idea, but counting **extra** memory you allocate. The input itself doesn't count.
+## Python costs to learn as they arise
 
-```python
-def has_dupes(nums):
-    seen = set()          # grows to n items -> O(n) space
-    for n in nums:
-        if n in seen: return True
-        seen.add(n)
-    return False
+- List membership scans up to n items: O(n), assuming constant-cost comparisons.
+- Dictionary/set lookup is expected O(1) for ordinary keys under typical hashing assumptions; collision-heavy worst cases can be O(n). Key hashing/comparison can also depend on key size.
+- List append is amortized O(1); an individual resize can cost O(n).
+- List insertion/removal at the front is O(n); deque end operations support O(1) insertion/removal.
+- Python's comparison sorting has O(n log n) worst-case time and can use O(n) auxiliary space. An in-place API does not imply constant auxiliary space. Already ordered inputs can take less time.
+- Recursive depth d uses O(d) stack space for constant-size frames, plus any other retained data.
 
-def is_palindrome(s):
-    left, right = 0, len(s) - 1   # two integers -> O(1) space
-    ...
-```
-
-The most common real trade-off in these interviews: **spend O(n) memory to drop from O(n²) time to O(n) time.** A hash map is that trade. Two pointers is the rarer, better deal — O(n) time at O(1) space — but it only works when the input has structure (usually: it's sorted).
-
-## Things beginners get wrong
-
-- **Sorting is not free.** The moment you call `.sort()`, your solution is at least O(n log n). Say so.
-- **`x in my_list` is O(n), `x in my_set` is O(1).** This one line changes a solution from O(n²) to O(n). In TypeScript: `array.includes()` is O(n), `set.has()` is O(1).
-- **Recursion uses space.** Depth-d recursion holds d stack frames: O(d) space, even if you allocated nothing.
-- **Nested loops aren't automatically O(n²).** If the inner loop's total work across the whole run is n, it's O(n). That is exactly why sliding window and two pointers are fast — go count the pointer moves.
+We initially treat bounded-size arithmetic and comparisons as constant cost. Very large integers, long strings, and expensive custom comparisons require a more detailed model. Learn the simple model first, then state its limits when relevant.

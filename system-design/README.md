@@ -1,40 +1,22 @@
-# System Design
+# System design learning track
 
-Nobody expects you to know how Instagram is built. They expect you to take a vague prompt, make sensible assumptions out loud, and defend your choices when pushed.
+Begin after the D03 foundation checkpoint. Follow S01–S10 in [the curriculum](../CURRICULUM.md). Start with [one request through a system](lessons/01-request-lifecycle/README.md), then learn storage and access patterns before scaling techniques.
 
-That's learnable, because it's a **sequence**, not a body of knowledge. Learn the sequence and you can design a system you've never thought about before.
+For each topic we explain the concept, trace a request, work an example, and ask you to make and defend a design choice. For full designs, use **requirements → APIs → data model → architecture → scaling → failure cases → trade-offs**.
 
-## The loop
+## Material
 
-```
-1. SCRIPT     Learn the 7-step sequence and the clock.
-2. WORKED     Read a full 45-minute design, written out, with the reasoning
-              behind every move made explicit.
-3. PRACTICE   You design a different system alone, on a timer, out loud.
-4. REVIEW     You bring me what you wrote. I review it like an interviewer:
-              what was strong, what I'd have pushed on, what would sink you.
-```
-
-## Start here
-
-1. [The 45-minute script](how-to-approach.md) — the seven steps, what goes in each, and the habits that actually score points. Read once, keep open.
-2. [Worked example: URL shortener](01-worked-example/) — the whole 45 minutes as a transcript. Every step is followed by a **💡 why I did that**, which is the real content.
-3. [Practice: design a rate limiter](practice.md) — your turn, on the clock, no help.
-
-Do them in that order. The worked example is only useful if you already know what the seven steps are.
-
-## Also here
-
-| Folder | What it's for |
+| Resource | When to use it |
 | --- | --- |
-| [`reference/`](reference/) | Short pages on caching, CAP, sharding, protocols, resilience, security. **Read these on demand**, when a design exposes a gap — not front-to-back beforehand. |
-| [`mock-interviews/`](mock-interviews/) | Ten prompts with hidden interviewer follow-ups. Use after the rate limiter. |
-| [`my-designs/`](my-designs/) | Your written designs. Start from `TEMPLATE.md`. |
+| [Starter lesson](lessons/01-request-lifecycle/README.md) | First system design session |
+| [Reference](reference/) | Alongside the matching curriculum module and when reviewing gaps |
+| [Approach guide](how-to-approach.md) | After fundamentals, to structure a complete design |
+| [URL shortener worked example](01-worked-example/) | After S04, then revisit its failures after S08 |
+| [Rate limiter practice](practice.md) | During S07 after studying rate-limiting algorithms |
+| [Design template](my-designs/TEMPLATE.md) | Save your own design and assumptions |
+| [Mock interviews](mock-interviews/) | After two guided full designs |
+| [Progress](progress.md) | Track reasoning, hints, feedback, and retries |
 
-## The five things that separate a pass from a fail
+The full design sequence is URL shortener, messaging, timeline, video platform, ride-hailing, streaming platform, and distributed file storage. Earlier documents remain practice resources; the curriculum determines prerequisites and the current learning order.
 
-1. **Requirements before boxes.** Spend the first ten minutes on scope and numbers. Most beginners spend twenty-five on the diagram and fail.
-2. **Numbers decide the architecture.** Estimate, then let the answer pick your design. If the estimate doesn't change a decision, you were decorating.
-3. **Name the cost of every choice.** Not "I'll use a cache" — "I'll use a cache; it costs me staleness and an invalidation problem, and it buys me the p99 we agreed on."
-4. **Start simple, scale under pressure.** Design the single-server version. Let the interviewer push. Opening with microservices is a junior tell.
-5. **Volunteer what breaks.** Name your design's weakest point before they find it. Every time, this reads as senior.
+A strong design explains who uses it, the workload, the read and write flows, why each component is needed, and what happens when a dependency fails. We will compare choices under stated assumptions, then change a requirement and see which decisions need to change.

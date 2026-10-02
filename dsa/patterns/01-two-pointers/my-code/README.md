@@ -1,6 +1,6 @@
 # My code — Pattern 01
 
-Paste your **passing** LeetCode submissions here. Not your drafts — the version that went green.
+Save your Python attempts here, including drafts and reasoning. After review, keep a corrected version and note the original mistake. Existing TypeScript files are optional older material.
 
 Why bother: in three weeks you'll re-solve these from scratch, and you'll want to diff what you write then against what you wrote today. That diff is the only honest measure of whether this is working.
 
@@ -22,7 +22,6 @@ Each stub has a `TODO`. Replace it with your submission, keep the test block at 
 
 ```bash
 python3 python/two_sum_ii.py
-node typescript/twoSumII.ts     # Node 22+ runs .ts directly, no install needed
 ```
 
 ## After it passes — write the retro

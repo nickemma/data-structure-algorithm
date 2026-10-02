@@ -1,59 +1,27 @@
-# Weekly study plan
+# Weekly study rhythm
 
-A rhythm, not a syllabus. Patterns unlock as you finish them, so the calendar bends to your pace rather than the other way round.
+Use [the curriculum](CURRICULUM.md) for topic order. This schedule sets a rhythm, not a deadline. Start with four sessions of 45–60 minutes a week; use shorter sessions if needed and carry unfinished work forward.
 
-Budget **~90 minutes a day**. If you only have 45, do the DSA block and drop the rest.
-
-## The weekly rhythm
-
-One pattern per week is a comfortable pace. Two per week is aggressive but doable if you're interviewing soon.
-
-| Day | Block | What |
+| Session | Before D03 foundation checkpoint | After D03 foundation checkpoint |
 | --- | --- | --- |
-| **Mon** | DSA · 60 min | Read the pattern lesson + do the walkthrough with me. |
-| **Tue** | DSA · 60 min | Practice problem 1, timed. Paste the passing code into `my-code/`. |
-| **Wed** | SD · 60 min | One system design module: script, worked example, or a mock. |
-| **Thu** | DSA · 60 min | Practice problem 2 + the recognition check. Bring both to me. |
-| **Fri** | Review · 45 min | Re-solve one problem from an earlier week, cold. Update `dsa/progress.md`. |
-| **Sat** | Mock · 60 min | Every 2–3 weeks: one timed DSA or system design mock. Otherwise rest. |
-| **Sun** | — | Off. Genuinely off. Retention needs it. |
+| 1 | Recall + DSA concept and trace | Recall + DSA concept and implementation |
+| 2 | Guided implementation + worked example | DSA worked example + independent exercise |
+| 3 | Independent exercise + feedback | System design concept + request trace/design exercise |
+| 4 | Retry + review + changed problem | DSA cold retry + mixed practice + progress update |
 
-Friday is the day people skip, and it's the day that actually builds retention. Protect it.
+A module can take several weeks. D04 combines several array techniques, and D13 and D15 especially deserve multiple sessions. Advance when the evidence supports it, not when a calendar says so.
 
-## Suggested sequence
+## First four sessions
 
-Week 1 is fixed. After that, the DSA order is the pattern order in [dsa/README.md](dsa/README.md), and system design runs alongside it independently.
+1. D01 lesson and the three duplicate-check reasoning questions. If Python syntax is a barrier, do D00 first.
+2. Review your reasoning; trace counts and memory on small examples. Discuss an improvement, then implement it together.
+3. Solve a different complexity exercise independently; explain best and worst cases and auxiliary memory.
+4. Retry from memory; if the D01 checkpoint is met, begin array and string fundamentals.
 
-| Week | DSA | System design |
-| --- | --- | --- |
-| 1 | [35-min script](dsa/how-to-solve.md) + [Big-O](dsa/big-o-basics.md) + Pattern 01 Two Pointers | [45-min script](system-design/how-to-approach.md) + [worked example](system-design/01-worked-example/) |
-| 2 | Pattern 02 Hash Map & Set | [Practice: rate limiter](system-design/practice.md) → review with me |
-| 3 | Pattern 03 Sliding Window | Reference: [scoping](system-design/reference/foundations/01-scoping/) + [scaling](system-design/reference/foundations/03-scaling/) |
-| 4 | Patterns 04–05 Linked lists | Mock: notification service |
-| 5 | Pattern 06 Binary Search | Reference: [caching](system-design/reference/foundations/06-caching/) + [CAP](system-design/reference/foundations/04-cap-theorem/) |
-| 6 | Patterns 07–08 Prefix Sum, Monotonic Stack | Mock: news feed |
-| 7 | Patterns 09–10 Intervals, Top K | Reference: [distributed data](system-design/reference/working-at-scale/11-distributed-data/) + [async workflows](system-design/reference/working-at-scale/10-async-workflows/) |
-| 8 | Pattern 11 Tree Traversal | Mock: job scheduler |
-| 9 | Pattern 12 Graphs & Matrices | Reference: [resilience](system-design/reference/working-at-scale/09-resilience/) + [protocols](system-design/reference/working-at-scale/08-protocols/) |
-| 10 | Pattern 13 Backtracking | Mock: chat service |
-| 11 | Pattern 14 Dynamic Programming (give this two weeks) | Reference: [case studies](system-design/reference/working-at-scale/12-case-studies/) |
-| 12 | Pattern 14 continued + Pattern 15 Bit Manipulation | Mock: pick your weakest |
-| 13+ | Re-solve everything cold, in random order | Re-run your two weakest designs from scratch |
+## Review rhythm
 
-## If you have an interview next week
+Revisit a solved problem after about 1 day, 1 week, and 1 month. A short retry can fit at the beginning of a session. If a review reveals a gap, schedule a related variation before adding more new topics.
 
-Drop the schedule. Do this instead:
+After D08, add a timed DSA exercise every second week in place of an independent exercise. After two guided system designs, add a design mock occasionally. Review the mock in the following session. Use 35–45 minutes for coding and about 45 minutes for design, adapting to the interview format.
 
-1. [The 35-minute script](dsa/how-to-solve.md) and [the 45-minute script](system-design/how-to-approach.md). These are pure technique and pay off immediately.
-2. Patterns **01 Two Pointers**, **02 Hash Map & Set**, **03 Sliding Window** — between them they cover a large share of what gets asked at screen stage.
-3. One full timed mock of each type. Out loud. Recorded.
-
-Technique before coverage. A candidate who structures the problem well and solves it with a hint beats one who knows more patterns and communicates none of it.
-
-## Rules that make this work
-
-- **Out loud, alone, in a real voice.** Every problem, every design.
-- **Time-box and stop.** 25 min easy · 35 min medium · 45 min design.
-- **Log everything** in [dsa/progress.md](dsa/progress.md), including failures. The weak-spots table is the most valuable page in the repo after a month.
-- **Re-solve, don't re-read.** 1 day, 1 week, 1 month, from a blank editor.
-- **Don't open `verdict.md` before writing your own answer.** One first attempt per problem — don't spend it reading.
+Record attempts and hints in [DSA progress](dsa/progress.md) or [system design progress](system-design/progress.md). Failed attempts are useful evidence and belong in the log too.
